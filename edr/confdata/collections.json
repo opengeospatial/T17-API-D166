@@ -1,0 +1,753 @@
+{
+	"type": "inline",
+	"resources": {
+		"noaa_global_hourly_surface": {
+			"type": "collection",
+			"title": "The Integrated Surface Dataset (global, hourly)",
+			"description": "The Integrated Surface Dataset (ISD) is composed of worldwide surface weather observations from over 35,000 stations, though the best spatial coverage is evident in North America, Europe, Australia, and parts of Asia. Parameters included are: air quality, atmospheric pressure, atmospheric temperature/dew point, atmospheric winds, clouds, precipitation, ocean waves, tides and more. ISD refers to the data contained within the digital database as well as the format in which the hourly, synoptic (3-hourly), and daily weather observations are stored. The format conforms to Federal Information Processing Standards (FIPS). ISD provides hourly data that can be used in a wide range of climatological applications. For some stations, data may go as far back as 1901, though most data show a substantial increase in volume in the 1940s and again in the early 1970s. Currently, there are over 14,000 'active' stations updated daily in the database. For user convenience, a subset of just the hourly data is available to users for download. It is referred to as Integrated Surface Global Hourly data, see associated download links for access to this subset.",
+			"keywords": [
+				"Integrated Surface Dataset",
+				"Global",
+				"NOAA"
+			],
+			"links": [
+					{
+						"type": "text/html",
+						"rel": "canonical",
+						"title": "information",
+						"href": "https://www.ncdc.noaa.gov/isd",
+						"hreflang": "en-US"
+					}
+			],
+			"extents": {
+				"spatial": {
+					"bbox": [
+						-180.00,
+						-90.00,
+						180.00,
+						90.00
+					],
+					"crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+				},
+				"temporal": {
+					"interval": [{
+							"begin":"1972-01-01T00:00:00Z",
+							"end":"1972-12-31T23:59:59Z"
+					}],
+					"trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+				}
+			},
+			"data_queries" : {
+					"position": {
+							"link": {
+									"href": "/collections/noaa_global_hourly_surface/position?coords={coords}",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": true,
+									"variables": {
+											"title": "Position query",
+											"description": "Position query",
+											"query_type": "position",
+											"coords" :{
+													"description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+											},
+											"output_formats": [
+													"CoverageJSON",
+													"GeoJSON",
+													"IWXXM"
+											],
+											"default_output_format": "IWXXM",
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							},
+							"linkrel":"relative"
+					},
+					"radius": {
+							"link": {
+									"href": "/collections/noaa_global_hourly_surface/radius?coords={coords}",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": true,
+									"variables": {
+											"title": "Radius query",
+											"description": "Radius query",
+											"query_type": "radius",
+											"coords" :{
+													"description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+											},
+											"output_formats": [
+													"CoverageJSON",
+													"GeoJSON",
+													"IWXXM"
+											],
+											"default_output_format": "GeoJSON",
+											"within_units": [
+													"km",
+													"miles"
+											],
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							},
+							"linkrel":"relative"
+					},
+					"area": {
+							"link":                 {
+									"href": "http://www.example.org/edr/collections/hrly_obs/area?coords={coords}",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": true,
+									"variables": {
+											"title": "Area query",
+											"description": "Area query",
+											"query_type": "area",
+											"coords" :{
+													"description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+											},
+											"output_formats": [
+													"CoverageJSON",
+													"GeoJSON",
+													"BUFR",
+													"IWXXM"
+											],
+											"default_output_format": "CoverageJSON",
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							}
+					},
+					"locations": {
+							"link": {
+									"href": "/collections/noaa_global_hourly_surface/locations",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": false,
+									"variables": {
+											"title": "Location query",
+											"description": "Location query",
+											"query_type": "locations",
+											"output_formats": [
+													"application%2Fgeo%2Bjson",
+													"text%2Fhtml"
+											],
+											"default_output_format": "application%2Fgeo%2Bjson",
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							},
+							"linkrel":"relative"
+					}
+			},
+			"crs": [
+					"CRS84"
+			],
+			"output_formats": [
+					"CoverageJSON",
+					"GeoJSON",
+					"IWXXM"
+			],
+			"parameter_names": {
+					"Wind Direction": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "degree true",
+									"symbol": {
+											"value": "°",
+											"type": "http://www.example.org/edr/metadata/units/degree"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_windDirection",
+									"label":  "Wind Direction"
+							},
+							"measurementType": {
+									"method": "mean",
+									"period": "-PT10M/PT0M"
+							}
+					},
+					"Wind Speed": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "mph",
+									"symbol": {
+											"value": "mph",
+											"type": "http://www.example.org/edr/metadata/units/mph"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_windSpeed",
+									"label": "Wind Speed"
+							},
+							"measurementType": {
+									"method": "mean",
+									"period": "-PT10M/PT0M"
+							}
+					},
+					"Wind Gust": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "mph",
+									"symbol": {
+											"value": "mph",
+											"type": "http://www.example.org/edr/metadata/units/mph"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_maximumWindGustSpeed",
+									"label": "Wind Gust"
+							},
+							"measurementType": {
+									"method": "maximum",
+									"period": "-PT10M/PT0M"
+							}
+					},
+					"Air Temperature": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label":  "degC",
+									"symbol": {
+											"value": "°C",
+											"type": "http://www.example.org/edr/metadata/units/degC"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+									"label": "Air Temperature"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Weather": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "weather",
+									"symbol": {
+											"value": "",
+											"type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+									"label": "Weather"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Relative Humidity": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "percent",
+									"symbol": {
+											"value": "%",
+											"type": "http://www.example.org/edr/metadata/units/percent"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/bufr4/b/13/_009",
+									"label": "Relative Humidity"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Dew point": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "degC",
+									"symbol": {
+											"value": "°C",
+											"type": "http://www.example.org/edr/metadata/units/degC"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_dewPointTemperature",
+									"label": "Dew point"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Pressure": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "hPa",
+									"symbol": {
+											"value": "hPa",
+											"type": "http://www.example.org/edr/metadata/units/hPa"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/bufr4/b/10/_051",
+									"label": "Pressure"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Pressure Tendancy": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "tendency",
+									"symbol": {
+											"value": "",
+											"type": "http://www.example.org/edr/metadata/units/hPa"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_pressureTendency",
+									"label": "Pressure Tendancy"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Visibility": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "m",
+									"symbol": {
+											"value": "m",
+											"type": "http://www.example.org/edr/metadata/units/m"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+									"label": "Visibility"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					}
+			},
+			"providers": [
+				{
+					"type": "feature",
+					"name": "PostGIS",
+					"data": "postgresql://noaauser:noaa2020@localhost:5432/noaa",
+					"id_field": "ogc_id",
+					"locid_field": "station",
+					"title_field": "station",
+					"table": "noaa_global_surface",
+					"geometry":{
+						"geom_field":"the_geom",
+						"geom_format":"ewkb"
+					},
+					"time_field":{
+						"time_format":"datetime",
+						"datetime":"date"
+					}
+				}
+			]
+		},
+		"noaa_global_surface_daily": {
+			"type": "collection",
+			"title": "The Integrated Surface Dataset (global, hourly)",
+			"description": "The Integrated Surface Dataset (ISD) is composed of worldwide surface weather observations from over 35,000 stations, though the best spatial coverage is evident in North America, Europe, Australia, and parts of Asia. Parameters included are: air quality, atmospheric pressure, atmospheric temperature/dew point, atmospheric winds, clouds, precipitation, ocean waves, tides and more. ISD refers to the data contained within the digital database as well as the format in which the hourly, synoptic (3-hourly), and daily weather observations are stored. The format conforms to Federal Information Processing Standards (FIPS). ISD provides hourly data that can be used in a wide range of climatological applications. For some stations, data may go as far back as 1901, though most data show a substantial increase in volume in the 1940s and again in the early 1970s. Currently, there are over 14,000 'active' stations updated daily in the database. For user convenience, a subset of just the hourly data is available to users for download. It is referred to as Integrated Surface Global Hourly data, see associated download links for access to this subset.",
+			"keywords": [
+				"Integrated Surface Dataset",
+				"Global",
+				"NOAA"
+			],
+			"links": [
+					{
+						"type": "text/html",
+						"rel": "canonical",
+						"title": "information",
+						"href": "https://www.ncdc.noaa.gov/isd",
+						"hreflang": "en-US"
+					}
+			],
+			"extents": {
+				"spatial": {
+					"bbox": [
+						-180.00,
+						-90.00,
+						180.00,
+						90.00
+					],
+					"crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+				},
+				"temporal": {
+					"interval": [{
+							"begin":"1972-01-01T00:00:00Z",
+							"end":"1972-12-31T23:59:59Z"
+					}],
+					"trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+				}
+			},
+			"data_queries" : {
+					"position": {
+							"link": {
+									"href": "/collections/noaa_global_surface_daily/position?coords={coords}",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": true,
+									"variables": {
+											"title": "Position query",
+											"description": "Position query",
+											"query_type": "position",
+											"coords" :{
+													"description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+											},
+											"output_formats": [
+													"CoverageJSON",
+													"GeoJSON",
+													"IWXXM"
+											],
+											"default_output_format": "IWXXM",
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							},
+							"linkrel":"relative"
+					},
+					"radius": {
+							"link": {
+									"href": "/collections/noaa_global_surface_daily/radius?coords={coords}",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": true,
+									"variables": {
+											"title": "Radius query",
+											"description": "Radius query",
+											"query_type": "radius",
+											"coords" :{
+													"description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+											},
+											"output_formats": [
+													"CoverageJSON",
+													"GeoJSON",
+													"IWXXM"
+											],
+											"default_output_format": "GeoJSON",
+											"within_units": [
+													"km",
+													"miles"
+											],
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							},
+							"linkrel":"relative"
+					},
+					"area": {
+							"link":                 {
+									"href": "http://www.example.org/edr/collections/hrly_obs/area?coords={coords}",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": true,
+									"variables": {
+											"title": "Area query",
+											"description": "Area query",
+											"query_type": "area",
+											"coords" :{
+													"description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+											},
+											"output_formats": [
+													"CoverageJSON",
+													"GeoJSON",
+													"BUFR",
+													"IWXXM"
+											],
+											"default_output_format": "CoverageJSON",
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							}
+					},
+					"locations": {
+							"link": {
+									"href": "/collections/noaa_global_surface_daily/locations",
+									"hreflang": "en",
+									"rel": "data",
+									"templated": false,
+									"variables": {
+											"title": "Location query",
+											"description": "Location query",
+											"query_type": "locations",
+											"output_formats": [
+													"application%2Fgeo%2Bjson",
+													"text%2Fhtml"
+											],
+											"default_output_format": "application%2Fgeo%2Bjson",
+											"crs_details": [
+													{
+															"crs": "CRS84",
+															"wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+													}
+											]
+									}
+							},
+							"linkrel":"relative"
+					}
+			},
+			"crs": [
+					"CRS84"
+			],
+			"output_formats": [
+					"CoverageJSON",
+					"GeoJSON",
+					"IWXXM"
+			],
+			"parameter_names": {
+					"Wind Direction": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "degree true",
+									"symbol": {
+											"value": "°",
+											"type": "http://www.example.org/edr/metadata/units/degree"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_windDirection",
+									"label":  "Wind Direction"
+							},
+							"measurementType": {
+									"method": "mean",
+									"period": "-PT10M/PT0M"
+							}
+					},
+					"Wind Speed": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "mph",
+									"symbol": {
+											"value": "mph",
+											"type": "http://www.example.org/edr/metadata/units/mph"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_windSpeed",
+									"label": "Wind Speed"
+							},
+							"measurementType": {
+									"method": "mean",
+									"period": "-PT10M/PT0M"
+							}
+					},
+					"Wind Gust": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "mph",
+									"symbol": {
+											"value": "mph",
+											"type": "http://www.example.org/edr/metadata/units/mph"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_maximumWindGustSpeed",
+									"label": "Wind Gust"
+							},
+							"measurementType": {
+									"method": "maximum",
+									"period": "-PT10M/PT0M"
+							}
+					},
+					"Air Temperature": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label":  "degC",
+									"symbol": {
+											"value": "°C",
+											"type": "http://www.example.org/edr/metadata/units/degC"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+									"label": "Air Temperature"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Weather": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "weather",
+									"symbol": {
+											"value": "",
+											"type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+									"label": "Weather"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Relative Humidity": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "percent",
+									"symbol": {
+											"value": "%",
+											"type": "http://www.example.org/edr/metadata/units/percent"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/bufr4/b/13/_009",
+									"label": "Relative Humidity"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Dew point": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "degC",
+									"symbol": {
+											"value": "°C",
+											"type": "http://www.example.org/edr/metadata/units/degC"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_dewPointTemperature",
+									"label": "Dew point"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Pressure": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "hPa",
+									"symbol": {
+											"value": "hPa",
+											"type": "http://www.example.org/edr/metadata/units/hPa"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/bufr4/b/10/_051",
+									"label": "Pressure"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Pressure Tendancy": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "tendency",
+									"symbol": {
+											"value": "",
+											"type": "http://www.example.org/edr/metadata/units/hPa"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_pressureTendency",
+									"label": "Pressure Tendancy"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					},
+					"Visibility": {
+							"type": "Parameter",
+							"description": "",
+							"unit": {
+									"label": "m",
+									"symbol": {
+											"value": "m",
+											"type": "http://www.example.org/edr/metadata/units/m"
+									}
+							},
+							"observedProperty": {
+									"id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+									"label": "Visibility"
+							},
+							"measurementType": {
+									"method": "instantaneous",
+									"period": "PT0M"
+							}
+					}
+			},
+			"providers": [
+				{
+					"type": "feature",
+					"name": "PostGIS",
+					"data": "postgresql://noaauser:noaa2020@localhost:5432/noaa",
+					"id_field": "ogc_id",
+					"locid_field": "station",
+					"title_field": "station",
+					"table": "noaa_global_surface_daily",
+					"geometry":{
+						"geom_field":"the_geom",
+						"geom_format":"ewkb"
+					},
+					"time_field":{
+						"time_format":"datetime",
+						"datetime":"date"
+					}
+				}
+			]
+		}
+		}
+}

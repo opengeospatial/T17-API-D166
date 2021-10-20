@@ -1,0 +1,54 @@
+{
+	"type": "inline",
+	"resourcelinks": [
+		{
+			"id": "observations",
+			"type": "group",
+			"ingroup":"",
+			"linkrel":"relative",
+			"link":{
+				"href": "groups/observations?f=application%2Fjson",
+				"rel": "self",
+				"type": "application/json",
+				"title": "observations group document as json"
+			}
+		},
+		{
+			"id": "metar",
+			"type": "collection",
+			"ingroup":"forecast",
+			"linkrel":"relative",
+			"link":{
+				"href": "collections/metar?f=application%2Fjson",
+				"rel": "self",
+				"type": "application/json",
+				"title": "metar document as json"
+			}
+		},
+		{
+			"id": "metar",
+			"type": "collection",
+			"ingroup":"observations",
+			"linkrel":"relative",
+			"link":{
+				"href": "collections/isd?f=application%2Fjson",
+				"rel": "self",
+				"type": "application/json",
+				"title": "Global hourly surface document as json"
+			}
+		},
+		{
+			"id": "forecast",
+			"type": "group",
+			"ingroup":"",
+			"linkrel":"relative",
+			"link":
+				{
+					"href": "groups/forecast?f=application%2Fjson",
+					"rel": "self",
+					"type": "application/json",
+					"title": "forecast group document as json"
+				}
+			}
+	]
+}

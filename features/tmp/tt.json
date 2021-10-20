@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"name": "DC_Building_Footprints",
+"features": [
+{ "type": "Feature", "properties": { "gml_id": "CWFID.DC_BLD_FTPRINTS.0.1" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -77.026027, 38.81184 ], [ -77.025877, 38.811865 ], [ -77.025921, 38.812028 ], [ -77.026072, 38.812003 ], [ -77.026027, 38.81184 ] ] ] } }
+]
+}
