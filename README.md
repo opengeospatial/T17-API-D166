@@ -377,7 +377,28 @@ Edit the file 'data/collections.json' to add new back-end PostGIS database. The 
 To be added.
 
 ## Running Through Docker
-To be added.
+
+### Run OGC API-Features
+The following command run the service directly using docker:
+```
+docker run -p 8080:8080 -d eugenegmu/ogc-api-features-javascript
+```
+To test the server, you may browse to http://localhost:8080 to test the results. This image does not have the PostGIS set up locally. The first three collections do not work properly. Configuration needs to be done if a proper postgis database set up with populated data. If a port is redirected to a different port other than 8080, the configuration needs to be updated. To get into the image, the following command may be used.
+```
+docker exec -it <container id or name> /bin/bash
+```
+The container ID or name can be found by run "docker container ls".
+
+### Run OGC API-Environmental Data Retrieval
+The following command run the service directly using docker:
+```
+docker run -p 8080:8080 -d eugenegmu/ogc-api-features-javascript
+```
+To test the server, you may browse to http://localhost:8080/edr/ to test the results. This image does not have the PostGIS set up locally. Configuration needs to be done with a proper postgis database set up with populated data. If a port is redirected to a different port other than 8080, the configuration needs to be updated. To get into the image, the following command may be used.
+```
+docker exec -it <container id or name> /bin/bash
+```
+The container ID or name can be found by run "docker container ls".
 
 ## Demonstration Deployment
 The demonstration deployments can be found at [Demonstration Services for OGC Testbed 17](https://aws4ogc17.webmapengine.com/). Direct links to specific landing page are [API-Features](https://aws4ogc17.webmapengine.com/wfs3/) and [API-EDR](https://aws4ogc17.webmapengine.com/edr/) respectively.
