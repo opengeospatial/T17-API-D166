@@ -392,7 +392,7 @@ The container ID or name can be found by run "docker container ls".
 ### Run OGC API-Environmental Data Retrieval
 The following command run the service directly using docker:
 ```
-docker run -p 8080:8080 -d eugenegmu/ogc-api-features-javascript
+docker run -p 8080:8080 -d eugenegmu/ogc-api-edr-javascript
 ```
 To test the server, you may browse to http://localhost:8080/edr/ to test the results. This image does not have the PostGIS set up locally. Configuration needs to be done with a proper postgis database set up with populated data. If a port is redirected to a different port other than 8080, the configuration needs to be updated. To get into the image, the following command may be used.
 ```
